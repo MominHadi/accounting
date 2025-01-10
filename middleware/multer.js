@@ -5,7 +5,7 @@ const path = require('path');
 const fileStorage = multer.diskStorage({
     destination: (req, file, cb) => {
         let folder = 'uploads';
-
+        console.log(req,file, 'Data tesing');
         // Check file type to determine folder
         if (['image/png', 'image/jpg', 'image/jpeg'].includes(file.mimetype)) {
             folder = 'uploads/images';
