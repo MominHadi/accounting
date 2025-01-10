@@ -272,7 +272,7 @@ exports.updateOrder = async (req, res) => {
             totalAmount, balanceAmount, advanceAmount,
         } = req.body;
 
-        // Parse items and handle image/document uploads
+        // Parse items and handle image/document tmp
         items = items ? JSON.parse(items) : [];
         let image = '', document = '';
         balanceAmount = balanceAmount || 0;

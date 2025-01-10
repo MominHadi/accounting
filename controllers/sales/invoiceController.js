@@ -184,7 +184,7 @@ exports.saveInvoice = async (req, res) => {
         if (!items) {
             items = []
         } else {
-            // Parse items and handle image/document uploads
+            // Parse items and handle image/document tmp
             items = JSON.parse(items);
         }
 

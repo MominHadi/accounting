@@ -146,7 +146,7 @@ exports.createOrder = async (req, res) => {
         poReference = poReference && typeof poReference === 'string' ? JSON.parse(poReference) : {};
         stateOfSupply = !stateOfSupply ? null : stateOfSupply
 
-        // Parse items and handle image/document uploads
+        // Parse items and handle image/document tmp
         // let itemsArray = JSON.parse(items);
 
         items = items ? JSON.parse(items) : [];
@@ -313,7 +313,7 @@ exports.updateOrder = async (req, res) => {
             totalAmount, balanceAmount, advanceAmount
         } = req.body;
 
-        // Parse items and handle image/document uploads
+        // Parse items and handle image/document tmp
         // let itemsArray = JSON.parse(items);
         items = items ? JSON.parse(items) : [];
 

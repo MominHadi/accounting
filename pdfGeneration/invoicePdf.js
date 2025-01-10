@@ -215,7 +215,7 @@ const generateCompanyNameSection = (doc, startX, startXRect) => {
     let spaceFromLeft = existingLogo ? 130 : startX;
 
     if (existingLogo) {
-        pathToLogo = path.join(__dirname, '..', 'uploads', 'images', businessProfile?.logo);
+        pathToLogo = path.join(__dirname, '..', 'tmp', 'images', businessProfile?.logo);
 
         doc.image(pathToLogo, startX, spaceFromTop + 5, { height: 50, width: 80 });
     };

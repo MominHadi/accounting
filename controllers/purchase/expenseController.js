@@ -113,7 +113,7 @@ exports.saveNewExpense = async (req, res) => {
             partyName = ''
         };
 
-        // Parse items and handle image/document uploads
+        // Parse items and handle image/document tmp
         items = items ? JSON.parse(items) : [];
         stateOfSupply = !stateOfSupply ? null : stateOfSupply;
 
@@ -432,7 +432,7 @@ exports.editExpense = async (req, res) => {
             partyName = "";
         };
 
-        // Parse items and handle image/document uploads
+        // Parse items and handle image/document tmp
         items = items ? JSON.parse(items) : [];
         let image = existingExpense.image, document = existingExpense.document;
         balanceAmount = balanceAmount || 0;

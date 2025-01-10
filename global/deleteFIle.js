@@ -3,7 +3,7 @@ const path = require('path');
 const deleteFile = (filename, fileType) => {
     return new Promise((resolve, reject) => {
 
-        const filePath = path.join(__dirname, '../', 'uploads', fileType, filename);
+        const filePath = path.join(__dirname, '../', 'tmp', fileType, filename);
         console.log(filePath, 'Path ');
         fs.unlink(filePath, (err) => {
             if (err) {

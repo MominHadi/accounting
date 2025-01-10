@@ -161,7 +161,7 @@ exports.createPurchaseBill = async (req, res) => {
             return res.status(400).json({ status: "Failed", message: "All Fields of Order are Required of Purchase Order" })
         };
 
-        // Parse items and handle image uploads
+        // Parse items and handle image tmp
         items = items ? JSON.parse(items) : [];
 
         let image = '';

@@ -20,10 +20,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/api", routes);
 
 // Middleware for serving static images
-app.use('/uploads/images', express.static(path.join(__dirname, 'uploads/images')));
+app.use('/tmp/images', express.static(path.join(__dirname, 'tmp/images')));
 
 // Alternatively, you can add another route for serving docs if needed:
-app.use('/uploads/docs', express.static(path.join(__dirname, 'uploads/docs')));
+app.use('/tmp/docs', express.static(path.join(__dirname, 'tmp/docs')));
 
 mongoose.connect(process.env.Mongo_URI)
     .then(response => {
