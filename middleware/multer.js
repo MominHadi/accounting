@@ -8,9 +8,9 @@ const fileStorage = multer.diskStorage({
         console.log(req,file, 'Data tesing');
         // Check file type to determine folder
         if (['image/png', 'image/jpg', 'image/jpeg'].includes(file.mimetype)) {
-            folder = 'uploads/images';
+            folder = 'tmp/images';
         } else if (['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'].includes(file.mimetype)) {
-            folder = 'uploads/docs';
+            folder = 'tmp/docs';
         }
 
         cb(null, path.join(__dirname, '../', folder));
